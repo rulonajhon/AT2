@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+body{
+    margin:0;
+    line-height: 1.5 ;
+}
+body,
+input,
+textarea,
+button{
+    font-family: 'Raleway',sans-serif;
+    font-weight: 400;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+.container{
+    max-width:1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-center{
+    align-items:center;
+}
+
+.section-title{
+   
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+    padding: 0 15px
+}
+.section-title h1{
+   display: inline-block;
+   font-size: 40px;
+   color: black;
+   font-weight: 700;
+   margin: 0;
+   position: relative;
+
+}
+.section-title h1::before{
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 80px;
+    height: 4px;
+    background-color:rgb(254, 108, 108) ;
+    
+}
+
+.btn-01{
+    background-color: rgb(254, 108, 108);
+    color: #ffffff;
+    border: 2px solid transparent;
+    padding: 10px 35px;
+    border-radius: 30px;
+    line-height: 1.5;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+.btn-01:hover{
+    background: transparent;
+    border-color:rgb(254, 108, 108) ;
+    color: rgb(254, 108, 108);
+}
+.btn-01:focus{
+outline: none;
+}
+
+/*header*/
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+.header.fixed{
+    background-color: #ffffff;
+    position: fixed;
+}
+.header .brand-name{
+    padding: 0 15px;
+}
+.header .brand-name a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+}
+.header.fixed .brand-name a{
+    color: #000000;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+.header .nav{
+    padding: 0 15px;
+}
+.header .nav ul{
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+.header .nav ul li{
+ display: inline-block;
+ margin-left: 30px;
+}
+.header .nav ul li a{
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: 600;color: white;
+   padding: 25px 0 ;
+   display: block;
+   transition: all 0.5s ease;
+   }
+.header.fixed .nav ul li a{
+color: #000000;
+   }
+.header.fixed .nav ul li a:hover, 
+.header .nav ul li a:hover{
+    color: rgb(254, 108, 108);
+}
+/*Home Section */
+.home-section{
+    min-height: 100vh;
+    background-image: url('pitiknijhon_.png');
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+.home-section:before{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+.home-section .row{
+    min-height: 100vh;
+}
+.home-section .home-content{
+   /* background-color: red; */
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.home-section .home-content h4{
+font-size: 20px ;
+color: #ffffff;
+margin: 0;
+}
+.home-section .home-content h1{
+    font-size: 60px ;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 10px;
+    }
+.home-section .scroll-down{ 
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    height: 30px;
+    width: 30px;
+    margin-left: -15px;
+    animation:scrollDown 2s ease infinite;
+}
+
+.home-section .scroll-down img{
+    width: 25px;
+    display: block;
+    margin: 2px auto;
+}
+
+/* about section */
+.about-section{
+    padding:80px 0;   
+}
+.about-section .about-img{
+    flex: 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 15px;
+}
+.about-section .about-img .img-box{
+    position: relative;
+}
+.about-section .about-img .img-box img{
+    display: block;
+    width: 100%;
+}
+.about-section .about-content{
+    flex:0 0 66.66%;
+    max-width: 66.66%;
+    padding: 0 15px;  
+}
+
+.about-section .section-title{
+    margin-bottom: 30px;
+    padding: 0;
+}
+.about-section .about-content p{
+    font-size: 16px;
+    color: #555555;
+    line-height: 26px;
+    margin: 0;
+}
+.about-section .about-content .stats .stat-box{ 
+    flex: 0 0 25% ;
+    max-width: 25%;
+    padding: 5px 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+.about-section .about-content .stats .stat-box h2{
+    font-size: 40px;
+    color: black;
+    margin: 0 0 5px;
+}
+.about-section .about-content .stats .stat-box h5{
+  font-size: 16px;  
+  color: #555555;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.about-section .about-content .btn{
+    margin-top: 30px;
+}
